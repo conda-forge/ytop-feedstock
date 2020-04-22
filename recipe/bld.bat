@@ -1,5 +1,5 @@
 :: build
-cargo install --locked --root "%PREFIX%" --path . || goto :error
+cargo install --locked --all-features --root "%PREFIX%" --path . || goto :error
 
 :: strip debug symbols
 strip "%PREFIX%\bin\ytop.exe" || goto :error
