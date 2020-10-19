@@ -11,7 +11,7 @@ source:
   sha256: d9fd6ce00e27de894bc0790947fbeab40e81e34afa5ead5a53d126c458d50e99
 
 build:
-  number: 0
+  number: 1
   # not compiling and not yet supported by upstream
   skip: true  # [win]
   missing_dso_whitelist:
@@ -19,7 +19,7 @@ build:
 
 requirements:
   build:
-    - rust
+    - {{ compiler('rust') }}
     - {{ compiler('c') }}   # [unix]
     - {{ native }}binutils    # [win]
 
